@@ -13,3 +13,5 @@ def ping(host):
 
     # Pinging
     return system_call("ping " + parameters + " " + host) == 0
+
+print(ping("88.148.169.128"))
