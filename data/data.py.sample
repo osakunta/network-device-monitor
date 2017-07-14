@@ -1,0 +1,8 @@
+# This is a sample file of data.py. Create a data.py file with following variables
+# to use this script.
+
+# Define which hosts should be pinged here
+hosts = [
+    "8.8.8.8",
+    "8.8.4.4"
+]
