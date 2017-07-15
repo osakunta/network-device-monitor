@@ -1,8 +1,20 @@
 # This is a sample file of data.py. Create a data.py file with following variables
 # to use this script.
 
-# Define which hosts should be pinged here
+# Define which hosts should be pinged in here. The array takes arrays of hosts.
+# - The first index is a human readable string of your liking which can be used
+#   to identify the host more easily.
+# - The second string is the ip address or domain of the monitored host.
+# - The third string is completely optional port number. If your host exposes an
+#   http port other than the default, this can be used in URL generation for Slack
+#   to create a direct link to the exposed functionality and thus speeds up debugging.
 hosts = [
-    "8.8.8.8",
-    "8.8.4.4"
+    ["NS1", "8.8.8.8"],
+    ["NS2", "8.8.4.4", "8080"]
 ]
+
+# The webhook url given by your Slack integration app
+slack_webhook_url = "[webhook_url]"
+
+# The Slack channel you want the notification to be sent
+slack_channel = "#[channel_name]"
