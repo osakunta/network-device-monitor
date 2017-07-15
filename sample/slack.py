@@ -1,13 +1,16 @@
 import requests, json
 from data.data import slack_channel
 
-headers = {'Content-type': 'application/json'}
-
+# Uses 'requests' library to send a http POST request to 'webhook_url' with a body 'message'
 def send_slack_notification(webhook_url, message):
-    r = requests.post(webhook_url, headers=headers, data=json.dumps(message))
-    print(r.status_code)
-    print(r.content)
+    headers = {'Content-type': 'application/json'}
+    request = requests.post(webhook_url, headers=headers, data=json.dumps(message))
 
+    print(request.status_code)
+    print(request.content)
+
+# Return a dictionary which represents JSON body of the Slack notification POST request
+# Documentation can be found here: https://api.slack.com/docs/messages
 def slack_message(host):
      return {
         "channel": slack_channel,

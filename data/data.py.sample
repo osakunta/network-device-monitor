@@ -13,7 +13,7 @@ hosts = [
     ["NS2", "8.8.4.4", "8080"]
 ]
 
-# The webhook url given by your Slack integration app
+# The webhook url given by your Slack integration app. Make sure to use https.
 slack_webhook_url = "[webhook_url]"
 
 # The Slack channel you want the notification to be sent
